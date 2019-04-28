@@ -66,7 +66,6 @@ namespace DirectSaleNet.Controllers
             {
                 if (id == null)
                 {
-                    ViewData["Title"] = "厂商注册";
                     Manufactor manufactor = new Manufactor();
                     manufactor.CompanyName = form["CompanyName"];
                     manufactor.Address = form["Address"];
@@ -78,7 +77,6 @@ namespace DirectSaleNet.Controllers
                     manufactor.Status = form["Status"];
                     _context.Manufactor.Add(manufactor);
                     _context.SaveChanges();
-                    return RedirectToAction(nameof(ManufactorList));
                 }
                 else
                 {
@@ -93,7 +91,6 @@ namespace DirectSaleNet.Controllers
                     manufactor.Status = form["Status"];
 
                     _context.SaveChanges();
-                    return RedirectToAction(nameof(ManufactorList));
                 }
                 return RedirectToAction("ManufactorList");
             }

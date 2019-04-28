@@ -63,3 +63,10 @@ select{
 .disable{
     pointer-events:none;
 }
+.text-danger {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    margin: 8px auto;
+    float: left;
+}

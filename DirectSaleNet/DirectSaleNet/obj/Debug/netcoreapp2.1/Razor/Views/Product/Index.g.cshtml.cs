@@ -66,7 +66,7 @@ using DirectSaleNet.Models;
             WriteLiteral("\r\n<h2>Index</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(133, 31, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c2b085cbb2304ea2b01b8150bc3866ee", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2aab81cd1e564bbeaa9d4a16a78464a7", async() => {
                 BeginContext(156, 4, true);
                 WriteLiteral("添加商品");
                 EndContext();
@@ -236,7 +236,7 @@ using DirectSaleNet.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1770, 58, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f6b577c9666846569d1bc1bfb852a70b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9b4a551c902549018090d261ad287f09", async() => {
                 BeginContext(1822, 2, true);
                 WriteLiteral("编辑");
                 EndContext();
@@ -271,7 +271,7 @@ using DirectSaleNet.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1848, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "194d701e7745487bb73a75008c6dda4f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bb97ff786a0740df8b01774928c8352c", async() => {
                 BeginContext(1903, 2, true);
                 WriteLiteral("详情");
                 EndContext();
@@ -306,7 +306,7 @@ using DirectSaleNet.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1929, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fce6832819a24bbeab35407e0669d071", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee565db519d441c8b3d3c99e81751fdc", async() => {
                 BeginContext(1983, 2, true);
                 WriteLiteral("删除");
                 EndContext();

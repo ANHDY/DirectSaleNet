@@ -204,7 +204,7 @@ using DirectSaleNet.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(1421, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e95cbe5daeea444a8936b476f6cddd6b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "49bc22ae3dba4530b4f449b9cdca2aba", async() => {
                 BeginContext(1474, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -239,7 +239,7 @@ using DirectSaleNet.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(1490, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3060e4cc25a5492380e8c6a4c2bf6fda", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1fdac786e126480fbd26d67381555956", async() => {
                 BeginContext(1512, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

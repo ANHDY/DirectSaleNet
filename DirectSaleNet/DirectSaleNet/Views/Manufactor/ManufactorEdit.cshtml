@@ -1,5 +1,6 @@
 ﻿@model DirectSaleNet.Models.Manufactor
 @inject DirectSaleNet.Services.OptionList Options
+
 <h4>ViewData["Title"]</h4>
 <hr />
 <div class="row">
@@ -51,16 +52,20 @@
                         <label asp-for="RegistDate" class="control-label"></label>
                     </td>
                     <td>
-                        @{ 
+                        <!---->@{
                             var date = "";
+
+                            if (Model == null)
+                            {
+                                date = @DateTime.Today.ToString("yyyy-MM-dd");
+                            }
+                            else
+                            {
+                                //date = Model.RegistDate.ToString("yyyy-MM-dd");
+                                //date = Model.RegistDate.ToString("yyyy-MM-dd");
+                            }
                         }
-                        if (Model == null)
-                        {
-                            string date = @DateTime.Today.ToString("yyyy-MM-dd");
-                        }
-                        else
-                        date=Model.RegistDate.ToString("yyyy-MM-dd");
-                        <input asp-for="RegistDate" class="form-control" value="@date" />
+                        <input asp-for="RegistDate" class="form-control"  />
                         <span asp-validation-for="RegistDate" class="text-danger"></span>
                     </td>
                 </tr>
