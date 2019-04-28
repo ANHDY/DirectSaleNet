@@ -1,0 +1,101 @@
+﻿@model DirectSaleNet.Models.ManufactorMode
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 style="text-align:center">厂商管理</h2>
+
+<form id="form1" method="post">
+    <table style="border-collapse:collapse;border:1px solid #ccc">
+        <tr>
+            <td>省份</td>
+            <td>
+                <select asp-for="Province" asp-items="@Model.Provinces">
+                    <option value="" selected="selected">全部</option>
+                </select>
+            </td>
+            <td>状态</td>
+            <td>
+                <select id="Status" name="Status" asp-for="Status">
+                    <option value=""></option>
+                    <option value="1">待审核</option>
+                    <option value="2">正常</option>
+                    <option value="3">关店</option>
+                </select>
+            </td>
+            <td>厂商名称</td>
+            <td><input type="text" id="ManufactorName" name="ManufactorName" asp-for="ManufactorName" /></td>
+            <td><input type="submit" value="确定" /></td>
+        </tr>
+    </table>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.manufactors[0].CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.manufactors[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.manufactors[0].Province)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.manufactors[0].City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.manufactors[0].ContactTel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.manufactors[0].RegistDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.manufactors[0].Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.manufactors)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Province)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactTel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegistDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div id="Pager">
+    <a asp-action="ManufactorList" asp-route-PageIndex="1">首页</a>
+    <a asp-action="ManufactorList" asp-route-PageIndex="@Model.PageIndex-1">上一页</a>
+    <span>共(@Model.PageCount)页 第(@Model.PageIndex)页</span>
+    <a asp-action="ManufactorList" asp-route-PageIndex="@Model.PageIndex+1">下一页</a>
+    <a asp-action="ManufactorList" asp-route-PageIndex="@Model.PageCount">最后一页</a>
+
+</div>

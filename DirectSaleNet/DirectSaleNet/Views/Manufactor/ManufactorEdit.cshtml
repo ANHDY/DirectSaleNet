@@ -1,0 +1,93 @@
+﻿@model DirectSaleNet.Models.Manufactor
+@inject DirectSaleNet.Services.OptionList Options
+<h4>ViewData["Title"]</h4>
+<hr />
+<div class="row">
+        <form asp-action="ManufactorEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <table>
+                <tr>
+                    <td>
+                        <label asp-for="CompanyName" class="control-label"></label>
+                    </td>
+                    <td>
+                        <input asp-for="CompanyName" class="form-control" />
+                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                    </td>
+                    <td>
+                        <label asp-for="Address" class="control-label"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label asp-for="Province" class="control-label"></label>
+                    </td>
+                    <td>
+                        <select asp-for="Province" class="form-control" asp-items="@Options.Provinces" ></select>
+                        <span asp-validation-for="Province" class="text-danger"></span>
+                    </td>
+                    <td>
+                        <label asp-for="City" class="control-label"></label>
+                    </td>
+                    <td>
+                        <select asp-for="City" class="form-control" asp-items="@Options.Citys" ></select>
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label asp-for="ContactTel" class="control-label"></label>
+                    </td>
+                    <td>
+                        <input asp-for="ContactTel" class="form-control" />
+                        <span asp-validation-for="ContactTel" class="text-danger"></span>
+                    </td>
+                    <td>
+                        <label asp-for="RegistDate" class="control-label"></label>
+                    </td>
+                    <td>
+                        @{ 
+                            var date = "";
+                        }
+                        if (Model == null)
+                        {
+                            string date = @DateTime.Today.ToString("yyyy-MM-dd");
+                        }
+                        else
+                        date=Model.RegistDate.ToString("yyyy-MM-dd");
+                        <input asp-for="RegistDate" class="form-control" value="@date" />
+                        <span asp-validation-for="RegistDate" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label asp-for="Status" class="control-label"></label>
+                    </td>
+                    <td>
+                        <select asp-for="Status" class="form-control">
+                            <option value=""></option>
+                            <option value="1">待审核</option>
+                            <option value="2">正常</option>
+                            <option value="3">关店</option>
+                        </select>
+                        <span asp-validation-for="Status" class="text-danger"></span>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Save" class="btn btn-danger" />
+            
+        </form>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
