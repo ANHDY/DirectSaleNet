@@ -30,9 +30,12 @@ namespace DirectSaleNet
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddDbContext<Models.DirectSaleContext>();
+            services.AddHttpContextAccessor();//通过这个中间件才能得到httpContext
+            services.AddSession();//要在服务中也添加session
+            services.AddDbContext<Models.DirectSaleContext>();//这些服务都可以在控制器中调用
             services.AddTransient<DirectSaleNet.Services.OptionList>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddScoped<DirectSaleNet.Authorize.LoginActionFilter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,7 +54,7 @@ namespace DirectSaleNet
             app.UseHttpsRedirection();
             app.UseStaticFiles();  //很重要  wwwroot里面的都是静态文件
             app.UseCookiePolicy();
-
+            app.UseSession();//启用session中间件注入
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

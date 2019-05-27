@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DirectSaleNet.Models;
 
-namespace DirectSaleNet.Controllers
+namespace DirectSaleNet.Controller
 {
-    public class HomeController : Controller
+    public class HomeController : Microsoft.AspNetCore.Mvc.Controller
     {
         public IActionResult Index()
         {
@@ -35,8 +35,9 @@ namespace DirectSaleNet.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(string ErrorMsg)
         {
+            ViewData["errormsg"] = ErrorMsg;
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }

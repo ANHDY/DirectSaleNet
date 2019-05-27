@@ -5,18 +5,29 @@ using System.Threading.Tasks;
 using DirectSaleNet.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
-
-namespace DirectSaleNet.Controllers
+using DirectSaleNet.Authorize;
+namespace DirectSaleNet.Controller
 {
-    public class ManufactorController : Controller
+    public class ManufactorController : Microsoft.AspNetCore.Mvc.Controller
     {
         private readonly DirectSaleContext _context;
         public ManufactorController(DirectSaleContext context)
         {
             _context = context;
         }
-        public IActionResult ManufactorList(string Province,string Status,string ManufactorName,int? PageIndex,int? id)
+        //public override void OnActionExecuted(ActionExecutedContext context)
+       // {
+          //  if(context.HttpContext.Session.GetString("UserID")==null)
+            //    context.Result = new RedirectResult("../UserLogin/Login");
+         //   else
+             //   return;
+            //base.OnActionExecuted(context);
+        //}
+        [Permission("厂商列表",PermissionID ="0102",PermissionName ="厂商查询")]
+        [ServiceFilter(typeof(LoginActionFilter))]
+        public async Task<IActionResult> ManufactorList(string Province,string Status,string ManufactorName,int? PageIndex,int? id)
         {
             if(id!=null)
             {
@@ -36,17 +47,20 @@ namespace DirectSaleNet.Controllers
             if (!string.IsNullOrEmpty(ManufactorName))
                 manufactor = manufactor.Where(m => m.CompanyName.Contains(ManufactorName));
             ManufactorMode mode = new ManufactorMode();
-            int count = manufactor.Count();
+            int count =await manufactor.CountAsync();
             mode.PageCount = (int)Math.Ceiling(count / (double)mode.PageSize);
             int pageIndex = PageIndex ?? 1;
             mode.PageIndex = (pageIndex >= mode.PageCount ? mode.PageCount : pageIndex);
-            mode.manufactors = manufactor.Skip((pageIndex - 1)*mode.PageSize).Take(mode.PageSize).ToList();
+            //await 异步调用
+            mode.manufactors = await manufactor.Skip((pageIndex - 1)*mode.PageSize).Take(mode.PageSize).ToListAsync();
             // _context.Manufactor.FromSql($"select * from Manufactor where province={ProvinceName} and Status={Status} and CompanyName like'%{ManufactorName}%'").ToList();
             var citys = from c in _context.Citys select new { Province = c.Province };
             mode.Provinces = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(citys.Distinct().ToList(), "Province", "Province");
             return View(mode);
         }
-        public  ActionResult ManufactorEdit(int? id)
+        [Permission("厂商注册",PermissionID ="0101",PermissionName = "厂商注册",IsFilter =false)]
+        [ServiceFilter(typeof(LoginActionFilter))]
+        public ActionResult ManufactorEdit(int? id)
         {
             if(id==null)
             {

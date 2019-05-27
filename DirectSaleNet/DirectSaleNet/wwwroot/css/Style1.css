@@ -4,12 +4,12 @@
     font:normal 14px "Miscrosoft YaHei";
 }
 input[type=submit]{
-    padding:5px 20px;
     background-color:#808080;
     color:#ffffff;
 }
 input[type=submit]:hover{
     background-color:#000000;
+    border:none;
 }
 table{
     margin:20px auto;
@@ -21,7 +21,7 @@ table{
 }
 th,td{
     border:1px solid #ad9898 !important;
-    padding:3px 6px;
+    padding:10px 20px;
     height:35px;
 }
 th{
@@ -29,8 +29,9 @@ th{
 }
 input[type=text],
 input[type=number]{
-    width:100px;
-    height:22px;
+    width:150px;
+    height:30px;
+    margin:auto;
 }
 select{
     min-width:100px;
@@ -40,20 +41,16 @@ select{
     padding-top:20px;
     text-align:center;
 }
-#Pager a,span{
-    border:1px solid #ad9898;
-    padding:2px 5px;
-    font-size:16px;
-    color:#808080;
-    text-decoration:none;
-}
+    #Pager a, span {
+        /*border:1px solid #ad9898;*/
+        padding: 2px 5px;
+        font-size: 16px;
+        color: #808080;
+        text-decoration: none;
+    }
 #Pager a:hover{
     background-color:#ddd9d9;
     color:#232222;
-}
-#DelButton{
-    background:url(/images/anyone.png);
-    height:20px;
 }
 #SearchDiv{
     border-bottom:1px solid #808080;

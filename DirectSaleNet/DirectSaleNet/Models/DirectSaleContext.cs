@@ -15,6 +15,7 @@ namespace DirectSaleNet.Models
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Citys> Citys { get; set; }
+        public virtual DbSet<Permissions> Permissions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

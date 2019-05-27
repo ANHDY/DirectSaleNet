@@ -1,0 +1,38 @@
+﻿@model List<DirectSaleNet.Models.Permissions>
+@{
+    Layout = null;
+}
+@if (Model != null)
+{
+    <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo" style="margin-right: 10px;">
+    @{
+        var top = Model.Where(p => p.TopID == "0").ToList();
+        foreach (var p in top)
+        {
+            if (!string.IsNullOrEmpty(p.Url))
+            {
+                <li class="layui-nav-item">
+                    <a href="@p.Url" target="MainFrame">@p.PermissionName</a>
+                </li>
+            }
+            else
+            {
+                <li class="layui-nav-item">
+                    <a href="javascript:;">@p.PermissionName</a>
+                    <dl class="layui-nav-child">
+                        @{
+                            var childs = Model.Where(c => c.TopID == p.PermissionID).ToList();
+                            foreach (var child in childs)
+                            {
+                                <dd><a href="@child.Url" target="MainFrame">@child.PermissionName</a></dd>
+                            }
+                        }
+                    </dl>
+                </li>
+            }
+        }
+    }
+    </ul>
+}
+
+

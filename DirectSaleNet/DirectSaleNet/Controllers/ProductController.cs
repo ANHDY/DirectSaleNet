@@ -6,9 +6,9 @@ using DirectSaleNet.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DirectSaleNet.Controllers
+namespace DirectSaleNet.Controller
 {
-    public class ProductController : Controller
+    public class ProductController : Microsoft.AspNetCore.Mvc.Controller
     {
         private readonly Models.DirectSaleContext _context;
         public ProductController(Models.DirectSaleContext context)

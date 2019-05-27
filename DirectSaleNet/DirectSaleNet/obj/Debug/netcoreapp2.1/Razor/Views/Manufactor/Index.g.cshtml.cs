@@ -84,17 +84,17 @@ using DirectSaleNet.Models;
             WriteLiteral("\r\n<h2 style=\"text-align:center\">厂商管理</h2>\r\n\r\n");
             EndContext();
             BeginContext(132, 939, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aca7982a2dfb4d7b897180f2d94e4c63", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "76d713a783d542f288f8a10ed0d886eb", async() => {
                 BeginContext(163, 143, true);
                 WriteLiteral("\r\n    <table style=\"border-collapse:collapse;border:1px solid #ccc\">\r\n        <tr>\r\n            <td>省份</td>\r\n            <td>\r\n                ");
                 EndContext();
                 BeginContext(306, 153, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e68a4d4864644be690ab28e11e71d950", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b887b77606bd4c27b10b496575d1efa9", async() => {
                     BeginContext(362, 22, true);
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(384, 48, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a1715e7064c141d8ad39f3365f3b9483", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2a7d64fea8b46d0a39f1602009b8049", async() => {
                         BeginContext(421, 2, true);
                         WriteLiteral("全部");
                         EndContext();
@@ -144,12 +144,12 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.Provinces;
                 WriteLiteral("\r\n            </td>\r\n            <td>状态</td>\r\n            <td>\r\n                ");
                 EndContext();
                 BeginContext(539, 280, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6511ecc90d6e46859c614dec4175f274", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4de28ec44af7485cbe5b2ddca9aabd6d", async() => {
                     BeginContext(590, 22, true);
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(612, 26, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc8e610a2e544057846ac632476f18a8", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c023abbe33374aa59db433e460e88a75", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
@@ -168,7 +168,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.Provinces;
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(660, 30, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "079032fa3fca41ada1004883cfbe4547", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f6a9abc508504ad6aa61a5c929e8e4bb", async() => {
                         BeginContext(678, 3, true);
                         WriteLiteral("待审核");
                         EndContext();
@@ -190,7 +190,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.Provinces;
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(712, 29, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "919bda8bcb4f427e86900e86b65b2cbe", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd319e2f93c949b7abe2a0de9a07ffbf", async() => {
                         BeginContext(730, 2, true);
                         WriteLiteral("正常");
                         EndContext();
@@ -212,7 +212,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.Provinces;
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(763, 29, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "331d27e2aa494a3cac15434ffe6a1ead", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46eea21da4584b82b30c1439a5f54114", async() => {
                         BeginContext(781, 2, true);
                         WriteLiteral("关店");
                         EndContext();
@@ -258,7 +258,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.For = ModelExpressionProvi
                 WriteLiteral("\r\n            </td>\r\n            <td>厂商名称</td>\r\n            <td>");
                 EndContext();
                 BeginContext(883, 88, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9ec274cd7b1744e7a4c1dc3c54c92bc3", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c5a6e616c5a343e481c3c1cf9ba55f75", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -455,7 +455,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(2890, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ee610546d12492baa9860f2455f0f05", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ef40bc82c3bf4f688980f6b907e98d02", async() => {
                 BeginContext(2935, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -490,7 +490,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(2967, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92c63b343fc04f918c9d6e22f0e2951a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbe3c2ed829d4308b964b0c591ee44b5", async() => {
                 BeginContext(3015, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -525,7 +525,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(3050, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ef1259b3e56c437e87e3954427bda4ed", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2b58c90589054c1bb3bc9106f0b207b7", async() => {
                 BeginContext(3097, 6, true);
                 WriteLiteral("Delete");
                 EndContext();
@@ -568,7 +568,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             WriteLiteral("    </tbody>\r\n</table>\r\n<div id=\"Pager\">\r\n    ");
             EndContext();
             BeginContext(3208, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fb1b166db9614f7f9acc23f538eeeec4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27f12b239da04602afe35f56d70a4e64", async() => {
                 BeginContext(3263, 2, true);
                 WriteLiteral("首页");
                 EndContext();
@@ -596,7 +596,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(3275, 79, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2aa227eff38c4684b25e01d6c9d7e582", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9dd39a7a584b5bba0efb44d0e99180", async() => {
                 BeginContext(3347, 3, true);
                 WriteLiteral("上一页");
                 EndContext();
@@ -652,7 +652,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             WriteLiteral(")页</span>\r\n    ");
             EndContext();
             BeginContext(3420, 79, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9d9969aaa68c4494affa07238246aad8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "62124a41eb1949358d8e21a6a9b790ac", async() => {
                 BeginContext(3492, 3, true);
                 WriteLiteral("下一页");
                 EndContext();
@@ -688,7 +688,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(3505, 78, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d88fcbe413d4a67aea72f2eb605fc31", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e94b13faddf54e03bdab43f2989bb7ec", async() => {
                 BeginContext(3575, 4, true);
                 WriteLiteral("最后一页");
                 EndContext();
